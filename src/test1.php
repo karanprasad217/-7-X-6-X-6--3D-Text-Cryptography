@@ -1,5 +1,5 @@
 <?php
-$sessionid = 'oqf44rpiga7nuf2fem8';
+$sessionid = '';
 //echo "<pre>";
 session_id($sessionid);
 session_start();
