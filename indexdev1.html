@@ -1,0 +1,257 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<style>
+input[type=text]{
+	outline:#F00;
+	color:#F00;
+}
+input[type=text],select{
+	outline:#F00;
+	font-size: 12px;
+	line-height: 20px;
+	font-family: Consolas,monospace;
+	letter-spacing:0.2px;
+	width:50%;
+	text-align:center;
+}
+
+</style>
+<script type="text/javascript" src="final.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form id="main" name="main" method="post">
+<pre>
+Enter the secret key : <input type="text" id="secret" name="secret" spellcheck="false" />
+<input type="submit" id="sub" name="sub"/>
+</pre>
+</form>
+<pre id="write">
+Secret Key entered by user : 
+</pre>
+<pre id="write2">
+ASCII value of each character : 
+</pre>
+<pre id="unique">
+Your unique set is : 
+</pre>
+<pre id="fill">
+Your sorted array is : 
+</pre>
+<pre id="write3">
+Your 1st digit array is : ( Column ) 
+</pre>
+<pre id="write4">
+Your 2nd digit array is : ( Rows )
+</pre>
+<pre id="write5">
+Your 3rd digit array is : ( Matrix )
+</pre>
+<pre id="matrix">
+Your Matrix :
+</pre>
+<script type="text/javascript">
+    $(function () {
+		$("#sub").click(function () {
+			var length17 = $("input[name='secret']").val().length;
+			var sec = $("input[name='secret']").val();
+			var res = sec.split("");
+			var unique = [];
+				$.each(res, function(i, el){
+    				if($.inArray(el, unique) === -1) unique.push(el);
+				});
+			if(Array.isArray(unique)){
+				//alert(unique);
+				};
+			//alert(res);
+			
+			if(($('#secret').val()) != ''){
+				event.preventDefault();
+					$.ajax({
+  type: 'POST',
+  url: 'http://localhost/pro12/index.html',
+  data: sec,
+  success : function() {
+                $("#write").append(sec);
+				var newarr=[];
+				var length = '3';
+				for (var i = 0, j = unique.length; i < j; i++) {
+					
+					var charCode = unique[i].charCodeAt(0);
+					
+				    newarr[i] = charCode;
+					//alert(charCode);
+					
+					
+//alert(res);
+
+}
+
+
+//alert(newarr); //show array without zero
+//$("#write2").append(newarr[0]);
+Number.prototype.pad = function(size) {
+  var s = String(this);
+  while (s.length < (size || 2)) {s = "0" + s;}
+  return s;
+}
+
+var nene1= []
+for (var j=newarr.length; j--;) {
+ 	var jacky = (newarr[j]).pad(3);
+	nene1[j] = jacky;   
+}
+//alert(length17);
+//alert(nene1); // show array with zero
+var awex1 = [];
+var awex2 = [];
+var awex3 = [];
+var awex4 = [];
+var awex5 = [];
+var awex6 = [];
+var awex7 = [];
+for (var me = 0, me1 = nene1.length; me < me1; me++) {
+	var joc1 = +nene1[me][0] + +length17;
+	awex1[me] = joc1;
+	var joc2 = +nene1[me][1] + +length17;
+	awex2[me] = joc2;
+	var joc3 = +nene1[me][2] + +length17;
+	awex3[me] = joc3;
+	//var joc4 = joc1+joc2+joc3;
+	//alert(joc3);
+	//alert(awex1);
+	}
+	//alert(awex3);
+	
+	for (var me3 = 0, me4 = awex1.length; me3 < me4; me3++) {
+		var joc4 = awex1[me3].toString();
+		awex4[me3] = joc4.slice(-1);
+		 if(awex4[me3]>=6){
+			 awex4[me3] = awex4[me3] - 5;
+			 //return true;
+			 }
+		}
+	for (var me5 = 0, me6 = awex2.length; me5 < me6; me5++) {
+		var joc5 = awex2[me5].toString();
+		awex5[me5] = joc5.slice(-1);
+		 if(awex5[me5]>=6){
+			 awex5[me5] = awex5[me5] - 5;
+			// return true;
+			 }
+		}
+	for (var me7 = 0, me8 = awex3.length; me7 < me8; me7++) {
+		var joc6 = awex3[me7].toString();
+		awex6[me7] = joc6.slice(-1);
+		 if(awex6[me7]>=7){
+			 awex6[me7] = awex6[me7] - 6;
+			// return true;
+			 }
+		}
+	for ( var me9 = 0, me10 = awex6.length; me9 < me10; me9++){ 
+		//var ja17 = ja17[mat, rw, col];
+		var joc7 = (awex6[me9]+' '+awex5[me9]+' '+ awex4[me9]).toString();
+		awex7[me9] = joc7;
+		}
+document.getElementById('fill').append(awex7);
+document.getElementById('write3').append(awex4);
+document.getElementById('write4').append(awex5);
+document.getElementById('write5').append(awex6);
+document.getElementById('unique').append(unique);
+document.getElementById('write2').append(nene1);
+//alert(awex4);
+//alert(awex5);
+//alert(awex6);
+            }
+ }); 
+alert (loveyou);
+				 }
+		    if(($('#secret').val()) == ''){
+				event.preventDefault();
+				alert('Enter value first');
+			}
+		});
+	});
+
+</script>
+
+<!--
+<script>
+Number.prototype.pad = function(size) {
+  var s = String(this);
+  while (s.length < (size || 2)) {s = "0" + s;}
+  return s;
+}
+
+alert((1000).pad(3)); // => "001"
+(10).pad(3) // => "010"
+(100).pad(3) // => "100"
+</script>
+
+-->
+
+
+
+<!--
+<script>
+function matrix(m, nh) {
+    var result = []
+    for(var ik = 0; ik < nh; ik++) {
+        result.push(new Array(m).fill(2))
+    }
+    return result
+}
+document.getElementById('matrix').append(matrix(6,6));
+</script>
+-->
+
+<script>
+var matrix = [];
+var blank = ' ';
+for(var i=0; i<7; i++) {
+	matrix[i] = [];
+	
+	for(var j=0; j<6; j++) {
+    	matrix[i][j] = [];
+		
+    for(var k=0; k<6; k++) {
+        matrix[i][j][k] = ' ';
+		
+    }
+	
+  }
+  
+}
+
+matrix[0][0][0]='16';
+matrix[0][5][5]='22';
+matrix[0][5][2]='2';
+matrix[1][0][0]='19';
+matrix[1][5][5]='23';
+matrix[2][0][0]='21';
+matrix[2][5][5]='22';
+matrix[3][0][0]='21';
+matrix[3][5][5]='22';
+matrix[4][0][0]='21';
+matrix[4][5][5]='22';
+matrix[5][0][0]='21';
+matrix[5][5][5]='22';
+matrix[6][0][0]='21';
+matrix[6][5][5]='22';
+for(var i=0; i<7; i++) {
+	var ty = 1;
+	document.write('<font style="font-family: Consolas,monospace; font-size:12px; ">your matrix number is </font>'+'<font style="color:#F00; font-family: Consolas,monospace; font-size:12px;">'+(+i+ty)+'</font>');
+//document.write('<pre>'+matrix[i] + '<br>'+'</pre>');
+for(var j=0; j<6; j++) {
+document.write('<pre>'+matrix[i][j] + '<br>'+'</pre>');
+}
+
+}
+//document.getElementById('matrix').append(matrix);
+</script>
+
+
+</body>
+</html>
