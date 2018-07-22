@@ -1,7 +1,7 @@
 <?php
 error_reporting(0);
 echo("<pre style='font-weight:bold;'>");
-$sessionid = 'oqf44rpiga7nuf2fem81';
+$sessionid = '';
 //echo "<pre>";
 session_id($sessionid);
 session_start();
