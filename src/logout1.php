@@ -2,7 +2,7 @@
 error_reporting(0);
 session_start();
 //session_destroy();
-header('Location: http://localhost/pro12/index.php');
+header('Location: ./pro12/index.php');
 unset($care1f1);
 //unset($_SESSION['together1']);
 //unset($_SESSION['together2']);
