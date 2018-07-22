@@ -2,7 +2,7 @@
 error_reporting(0);
 session_start();
 //session_destroy();
-header('Location: http://localhost/pro12/index2.php');
+header('Location: ./pro12/index2.php');
 unset($_SESSION['cart1']);
 unset($_SESSION['cart2']);
 unset($_SESSION['cart3']);
