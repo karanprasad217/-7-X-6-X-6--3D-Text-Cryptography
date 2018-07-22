@@ -1,6 +1,6 @@
 <?php
 error_reporting(0);
-$sessionid = 'oqf44rpiga7nuf2fem81';
+$sessionid = '';
 //echo "<pre>";
 session_id($sessionid);
 session_start();
