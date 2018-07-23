@@ -1,6 +1,6 @@
-﻿[7 X 6 X 6](3D)Text Cryptography									         Dated: 00:33 23-07-2018
+[7 X 6 X 6](3D)Text Cryptography									         Dated: 00:33 23-07-2018
  
-Highlights : Play Fair 3D + Kerberos + Deffie-Hellmann Key Exchange + Time Validity of Message + Public/Private Key 
+Highlights : Play Fair 3D + Kerberos + Deffie-Hellman Key Exchange + Time Validity of Message + Public/Private Key 
 
 We pledge that we have not received any personal assistance of any being in this project.
 
