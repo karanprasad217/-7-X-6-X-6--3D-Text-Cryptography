@@ -1,3 +1,4 @@
+<!--[7 X 6 X 6](3D)Text Cryptography-->
 <!--DeffieHellman-->
 <?php
 error_reporting(0);
